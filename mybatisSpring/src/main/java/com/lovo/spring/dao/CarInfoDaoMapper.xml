@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lovo.spring.dao.ICarInfoDao">
+    <insert id="outCar">
+        insert into t_carinfo(plateNumber, stopDate, outDate, stopTime, outTime, stopMoney)values
+        (#{plateNumber},#{stopDate},#{outDate},#{stopTime},#{outTime},#{stopMoney})
+    </insert>
+    <update id="updateTime">
+        update t_carinfo set outDate = #{param1},outTime = #{param2},stopMoney = (outTime-stopTime)*#{param3}  where id = #{param4}
+    </update>
+    <select id="findNullStall" resultType="int">
+        select surplusStallNum from t_garage
+    </select>
+    <select id="findAll" resultType="CarInfoBean">
+        select * from t_carinfo where plateNumber=#{param1}
+    </select>
+    <update id="update">
+        update t_garage set surplusStallNum = surplusStallNum+(#{param1}*1)
+    </update>
+</mapper>
