@@ -12,6 +12,8 @@
     <modules>
         <module>mybatisSpring</module>
         <module>hibernate</module>
+        <module>springHibernate</module>
+        <module>productSpringJPA</module>
     </modules>
 
     <name>ssh</name><!--一些无关太重要的东西，用户描述你的项目的名字,可选的 -->
