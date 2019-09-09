@@ -52,6 +52,12 @@ public class ProductTest {
         for (ProductEntity pro: list) {
             System.out.println(pro.getProductName());
         }
+    }
 
+    @Test
+    public void findByNameOrType(){
+        IProductService productService = (IProductService) app.getBean("productService");
+        List<ProductEntity> list = productService.findByProductNameOrProductType("名字1", "类型1");
+        System.out.println(list.size());
     }
 }

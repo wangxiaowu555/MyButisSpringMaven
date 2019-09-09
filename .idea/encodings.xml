@@ -2,9 +2,9 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringMVC" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatisSpring" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/productSpringHibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/productSpringJPA" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springHibernate" charset="UTF-8" />
   </component>

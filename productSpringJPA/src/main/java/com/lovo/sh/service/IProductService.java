@@ -9,4 +9,5 @@ public interface IProductService {
     List<ProductEntity> findByProductType(String type);
     int updateInTimeAndState(String num);
     List<ProductEntity> findByProductState(int state);
+    public List<ProductEntity> findByProductNameOrProductType(String name,String type);
 }

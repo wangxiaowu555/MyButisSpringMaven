@@ -1,6 +1,7 @@
 package com.lovo.sh.service.impl;
 
 import com.lovo.sh.dao.IProductDao;
+import com.lovo.sh.dao.ProductDaoImpl;
 import com.lovo.sh.entity.ProductEntity;
 import com.lovo.sh.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ import java.util.List;
 public class ProductServiceImpl implements IProductService {
     @Autowired
     private IProductDao productDao;
+    @Autowired
+    private ProductDaoImpl productDaoImpl;
     @Override
     public void savaProduct(ProductEntity product) {
         productDao.save(product);
@@ -42,6 +45,11 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public List<ProductEntity> findByProductState(int state) {
         return productDao.findByProductState(state);
+    }
+
+    @Override
+    public List<ProductEntity> findByProductNameOrProductType(String name, String type) {
+        return productDaoImpl.findByProductNameOrProductType(name,type);
     }
 
 }

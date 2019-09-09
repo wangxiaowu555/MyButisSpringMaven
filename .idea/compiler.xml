@@ -10,6 +10,7 @@
         <module name="mybatisSpring" />
         <module name="productSpringJPA" />
         <module name="springHibernate" />
+        <module name="SpringMVC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

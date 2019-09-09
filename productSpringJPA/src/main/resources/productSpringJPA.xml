@@ -34,8 +34,7 @@
     </bean>
 
     <!-- JPA实体管理器工厂 -->
-    <bean id="entityManagerFactory"
-          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <!-- hibernate的适配器 -->
         <property name="jpaVendorAdapter" >
